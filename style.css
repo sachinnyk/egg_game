@@ -1,0 +1,99 @@
+#score_help{
+   text-align: center;
+   padding-bottom: 15px;
+   background-color:blueviolet;
+   border-bottom: 2px solid black;
+}
+#container{
+    width: 90%;
+    height: 90%;
+    margin-left: 5%;
+    background-color: blanchedalmond;
+    overflow: hidden;
+    position: relative;
+}
+.hen{
+    position: absolute;
+    height: 16%;
+    width: 8%;
+    background: url(hen-right.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 100;
+}
+#hen1{
+    left: 20%;
+}
+#hen2{
+    left: 40%;
+}
+#hen3{
+    left:60%;
+}
+
+.egg{
+    height: 5%;
+    width: 2%;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 99;
+    background-color: #fff;
+}
+#egg1{
+    top: 15%;
+    left: calc(20% + 8%/2 - 2%/2);
+}
+
+#egg2{
+    top: 15%;
+    left: calc(40% + 8%/2 - 2%/2);
+}
+
+#egg3{
+    top: 15%;
+    left: calc(60% + 8%/2 - 2%/2);
+}
+
+#floor{
+    bottom: 0;
+    position: absolute;
+    background-color: black;
+    height: 5%;
+    width: 100%;
+    z-index: 11;
+}
+
+#basket{
+    position: absolute;
+    height: 100px;
+    width: 85px;
+    background: url(basket.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 3%;
+    z-index: 100;
+}
+
+.bullseye{
+    position: absolute;
+    background: url(bullseye1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50px;
+    width: 100px;
+    bottom: 4%;
+    z-index: 13;
+    display: none;
+}
+
+#bullseye1{
+    left: 20%;
+}
+
+#bullseye2{
+    left: 40%;
+}
+
+#bullseye3{
+    left: 60%;
+}

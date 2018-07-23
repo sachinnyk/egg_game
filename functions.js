@@ -33,12 +33,31 @@ function show_bullseye(egg_var){
 }
 
 function egg_down(egg_var){
-    if(collision_detection(egg_var,floor)){
+    if(egg_hits_ground(egg_var) || egg_hits_basket(egg_var)){
         egg_var.css('top',egg_initial_pos);
-        show_bullseye(egg_var);  
     }
-    
+
     egg_current_pos = parseInt(egg_var.css('top'));
-    collision_detection(egg_var,basket);
+   
     egg_var.css('top',egg_current_pos + 2);
+}
+
+function egg_hits_ground(egg){
+    if(collision_detection(egg,floor)){   
+        show_bullseye(egg);  
+        life--;
+        life_span.text(life);
+        return true;
+    }
+    return false;
+}
+
+function egg_hits_basket(egg){
+    if(collision_detection(egg,basket)){
+        cur_score++;
+        score.text(cur_score);
+        return true;
+    }
+    return false;
+
 }

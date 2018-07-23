@@ -14,8 +14,9 @@
     max_speed=15,
     score_updated=false,
     basket_top=container_height -basket_height,
-    life=15,
+    life=10,
     floor = $('#floor'),
     egg_current_pos=0,
-    score=0;
+    cur_score=0;
     life_span.text(life);
+    score.text(cur_score);

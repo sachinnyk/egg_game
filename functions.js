@@ -54,9 +54,13 @@ function egg_hits_ground(egg){
 
 function egg_hits_basket(egg){
     if(collision_detection(egg,basket)){
-        cur_score++;
-        score.text(cur_score);
-        return true;
+        egg_top=parseInt(egg.css('top'));
+        if(egg_top < basket_top){
+            cur_score++;
+            score.text(cur_score);
+            return true;
+        }
+        
     }
     return false;
 
